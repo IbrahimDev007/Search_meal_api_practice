@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+
+	<body>
+		<header>
+			<nav class="flex justify-between m-3">
+				<h3 class="text-2xl text-red-500">Testy Hut</h3>
+				<button class="btn btn-primary">Sign in</button>
+			</nav>
+			<section id="hero">
+				<div
+					class="hero min-h-screen"
+					style="background-image: url(/images/banner_1.png)"
+				>
+					<div class="hero-overlay bg-opacity-60"></div>
+					<div class="hero-content text-center text-neutral-content">
+						<div class="max-w-md">
+							<h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+							<p class="mb-5">
+								Provident cupiditate voluptatem et in. Quaerat fugiat ut
+								assumenda excepturi exercitationem quasi. In deleniti eaque aut
+								repudiandae et a id nisi.
+							</p>
+							<div class="flex justify-center items-center">
+								<input
+									type="text"
+									placeholder="Type here"
+									id="search_food"
+									class="input w-full max-w-xs text-black"
+								/>
+								<button class="btn btn-primary" onclick="searchMeal()">
+									Search
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</header>
+		<main>
+			<div>
+				<h1 class="text-3xl text-cyan-500 text-center p-4 m-2 bg-blue-900">
+					Testy Hunt
+				</h1>
+                <!-- section main content  -->
+				<section class="flex justify-center">
+					<div id="pogress" class="radial-progress hidden" style="--value: 70">
+						70%
+					</div>
+				</section>
+  <!-- button content  -->
+				<div id="meal " class="flex flex-col justify-center m-10">
+					<div
+						id="meal-content"
+						class="grid grid-col gap-4 md:grid-cols-2 lg:grid-cols-2 my-4"
+					>
+						
+						
+					</div>
+					<button
+						id="showButton"
+						class="btn btn-md bg-green-600 mx-auto"
+						onclick="toggleShow()"
+					>
+						Show All
+					</button>
+				</div>
+  <!-- section modal -->
+<section id="'modal">
+    <input type="checkbox"  id="my-modal-3" class="modal-toggle" />
+    <div class="modal" >
+        <div class="modal-box relative" id="modal">
+           
+        </div>
+    </div>
+
+</section>
+			</div>
+		</main>
+		<script src="./js/mealdb.js"></script>
+	</body>
+</html>
